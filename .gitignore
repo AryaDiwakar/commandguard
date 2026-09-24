@@ -1,0 +1,26 @@
+# deps
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# build
+web/dist/
+web/*.tsbuildinfo
+
+# data
+backend/data/*.db
+backend/data/*.db-journal
+backend/data/splits/
+backend/data/reports/
+/data/
+data/corpus/
+data/splits/
+data/reports/
+.SPot/
+
+# env / os
+.DS_Store
+*.log
+.env

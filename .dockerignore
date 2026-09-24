@@ -1,0 +1,14 @@
+web
+docs
+scripts
+tests
+.venv
+.git
+.github
+*.db
+*.joblib
+*.parquet
+__pycache__
+.pytest_cache
+node_modules
+*.log
