@@ -16,7 +16,7 @@ export default {
           dark: "#a16207",
           soft: "#fef08a",
         },
-        cat: "#facc15",
+        signal: "#facc15",
         danger: "#ef4444",
         warn: "#f59e0b",
         good: "#22c55e",

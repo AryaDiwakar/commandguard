@@ -32,7 +32,7 @@ export function AppShell({ children, activePage, onNavigate, safetyCleared }: { 
       <div className="hud-overlay" />
       <aside className="fixed left-0 top-0 z-30 flex h-full w-16 flex-col gap-1 border-r border-yellow-400/15 bg-black/75 px-1 py-4 backdrop-blur-xl sm:w-52 sm:px-2">
         <div className="mb-4 px-1 sm:px-2">
-           <div className="font-mono text-lg font-bold tracking-[0.25em] text-cat">CAT</div>
+           <div className="font-mono text-lg font-bold tracking-[0.25em] text-signal">CG</div>
            <div className="mt-1 hidden text-xs font-semibold tracking-[0.18em] text-slate-300 sm:block">COMMANDGUARD</div>
            <div className="hud-label mt-1 hidden sm:block">SMART OPERATOR ASSISTANT</div>
           <div className="boot-line mt-2" />

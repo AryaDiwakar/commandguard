@@ -120,7 +120,7 @@ export function LiveMachinePage() {
       {/* ---------- command bar ---------- */}
       <header className="glass-panel flex flex-wrap items-center gap-4 px-4 py-3">
         <div className="flex items-center gap-3">
-          <span className="font-mono text-sm font-bold tracking-[0.25em] text-cat">CAT</span>
+          <span className="font-mono text-sm font-bold tracking-[0.25em] text-signal">CG</span>
           <span className="hud-label hidden sm:block">COMMANDGUARD / LIVE MACHINE</span>
           <span className="rounded border border-holo/40 bg-holo/10 px-2 py-0.5 num text-[10px] text-holo">
             {sys?.data_mode ?? "…"} MODE
@@ -308,7 +308,7 @@ export function LiveMachinePage() {
         <Panel title="POWERTRAIN & FUEL">
           <div className="grid grid-cols-3 gap-3">
             <Readout label="Fuel" value={f?.fuel_level_pct.toFixed(1) ?? "—"} unit="%" tone="good" />
-            <Readout label="Burn rate" value={f?.fuel_consumption_rate_lph.toFixed(1) ?? "—"} unit="L/h" tone="cat" />
+            <Readout label="Burn rate" value={f?.fuel_consumption_rate_lph.toFixed(1) ?? "—"} unit="L/h" tone="signal" />
             <Readout label="Fuel used" value={f?.Fuel_Used_L.toFixed(1) ?? "—"} unit="L" />
             <Readout label="Engine hrs" value={f?.Engine_Hours.toFixed(1) ?? "—"} unit="h" />
             <Readout label="Load cycles" value={f?.Load_Cycles ?? "—"} />

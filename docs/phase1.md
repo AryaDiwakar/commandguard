@@ -31,7 +31,7 @@ conservation, schema conformance, situation derivation, live streaming).
    of `{frame, situation, events}`; REST control (`/api/simulation/*`, `/api/state`,
    `/api/onboard`, `/api/system/*`).
 
-6. **Holo-Command frontend** (`web/`) — carbon canvas, glass panels, CAT-amber + cyan
+6. **Holo-Command frontend** (`web/`) — carbon canvas, glass panels, amber + cyan
    holography, scanline overlay; Live Machine page with ●LIVE indicator, digital machine
    environment shell, Vitals Rail (canvas time-trace with glow), Recharts telemetry
    charts, situation hero, and readout panels. WS client batches frames via

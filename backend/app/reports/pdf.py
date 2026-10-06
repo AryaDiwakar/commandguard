@@ -9,7 +9,7 @@ def _safe(value: object) -> str:
 def incident_pdf(report: dict) -> bytes:
     incident = report["incident"]
     lines = [
-        "CAT COMMANDGUARD - SYNTHETIC INCIDENT REPORT",
+        "COMMANDGUARD - SYNTHETIC INCIDENT REPORT",
         f"Incident: {incident.get('incident_id')}",
         f"Machine: {incident.get('machine_id')}   Operator: {incident.get('operator_id')}",
         f"Task: {incident.get('task_type')}   Severity: {incident.get('severity')}",

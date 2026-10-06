@@ -10,12 +10,13 @@ router = APIRouter(prefix="/api/system", tags=["system"])
 async def system_status(request: Request):
     sim = request.app.state.sim
     return {
-        "name": "CAT CommandGuard",
+        "name": "CommandGuard",
         "data_mode": "SIMULATION",
         "running": any(session.running for session in sim.sessions.values()),
         "disclaimer": (
-            "Simulated telemetry only. This software is not connected to real "
-            "Caterpillar hardware and does not claim access to proprietary CAT data."
+            "Simulated telemetry only. This application runs entirely on synthetic "
+            "data: it is not connected to any real machine and does not use "
+            "proprietary manufacturer data."
         ),
         "version": "0.5.0-hackathon",
     }

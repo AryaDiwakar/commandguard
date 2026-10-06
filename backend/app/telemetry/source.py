@@ -98,7 +98,7 @@ class HttpLiveDataSource:
     """Opt-in read-only adapter for an approved telemetry gateway.
 
     The gateway contract is intentionally generic. It expects
-    ``GET /telemetry/latest`` to return one normalized frame. No CAT endpoint,
+    ``GET /telemetry/latest`` to return one normalized frame. No manufacturer endpoint,
     hardware credential, or proprietary field mapping is embedded here.
     """
 

@@ -10,7 +10,7 @@ def test_system_status(client):
     body = r.json()
     assert body["data_mode"] == "SIMULATION"
     assert "disclaimer" in body
-    assert "Caterpillar" in body["disclaimer"]
+    assert "Simulated telemetry only" in body["disclaimer"]
 
 
 def test_start_stop_lifecycle(client):

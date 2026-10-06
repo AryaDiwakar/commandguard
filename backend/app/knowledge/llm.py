@@ -15,7 +15,7 @@ OLLAMA_URL = os.getenv("OLLAMA_URL", "http://127.0.0.1:11434")
 PREFERRED_MODELS = tuple(
     m.strip()
     for m in os.getenv(
-        "CAT_LLM_MODELS",
+        "COMMANDGUARD_LLM_MODELS",
         "llama3.2:3b,qwen2.5:3b",
     ).split(",")
     if m.strip()

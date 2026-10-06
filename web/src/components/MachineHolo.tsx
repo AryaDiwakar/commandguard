@@ -107,7 +107,7 @@ export function MachineHolo({ frame }: { frame: TelemetryFrame | null }) {
           RPM <span className="text-holo">{f?.engine_rpm?.toFixed(0) ?? "—"}</span>
         </span>
         <span className="rounded border border-carbon-600/70 bg-carbon-900/80 px-1.5 py-0.5 num text-[10px] text-slate-400">
-          ZONE <span className="text-cat">{f?.work_zone ?? "—"}</span>
+          ZONE <span className="text-signal">{f?.work_zone ?? "—"}</span>
         </span>
         <span className="rounded border border-carbon-600/70 bg-carbon-900/80 px-1.5 py-0.5 num text-[10px] text-slate-400">
           TERRAIN <span className="text-slate-200">{f?.terrain_condition ?? "—"}</span>

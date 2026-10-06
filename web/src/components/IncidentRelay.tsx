@@ -52,7 +52,7 @@ export function IncidentRelay({
           <p className="mt-2 text-xs leading-relaxed text-slate-400">{incident.recommended_action}</p>
           <div className="mt-3 flex gap-4 text-xs">
             <span className="text-slate-500">CONF <b className="num text-slate-100">{incident.confidence.toFixed(2)}</b></span>
-            <span className="text-slate-500">RELAY <b className={"num " + (requested ? "text-cat" : "text-slate-100")}>{incident.help_status.replace(/_/g, " ")}</b></span>
+            <span className="text-slate-500">RELAY <b className={"num " + (requested ? "text-signal" : "text-slate-100")}>{incident.help_status.replace(/_/g, " ")}</b></span>
             <span className="text-slate-500">RESPONSE <b className={"num " + (incident.response_status === "VERIFIED" ? "text-good" : "text-slate-100")}>{incident.response_status.replace(/_/g, " ")}</b></span>
           </div>
         </div>
@@ -74,7 +74,7 @@ export function IncidentRelay({
           {!requested && !resolved && (
             <button
               onClick={onRequestHelp}
-              className="rounded border border-cat/70 bg-cat/10 px-3 py-2 num text-xs font-semibold tracking-widest text-cat transition hover:bg-cat/20"
+              className="rounded border border-signal/70 bg-signal/10 px-3 py-2 num text-xs font-semibold tracking-widest text-signal transition hover:bg-signal/20"
             >
               REQUEST LIVE ASSISTANCE
             </button>

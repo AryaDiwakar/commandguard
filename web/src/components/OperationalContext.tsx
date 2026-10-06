@@ -19,7 +19,7 @@ export function OperationalContext({
         <div className="grid grid-cols-2 gap-3">
           <div><div className="hud-label">CURRENT TASK</div><div className="mt-1 num text-lg text-slate-100">{situation?.task ?? currentTask?.Task_Type ?? "—"}</div></div>
           <div><div className="hud-label">PROGRESS</div><div className="mt-1 num text-lg text-holo">{situation ? `${situation.task_progress_pct.toFixed(1)}%` : "—"}</div></div>
-          <div><div className="hud-label">DYNAMIC ETA</div><div className="mt-1 num text-lg text-cat">{situation?.eta_minutes.toFixed(1) ?? "—"} min</div></div>
+          <div><div className="hud-label">DYNAMIC ETA</div><div className="mt-1 num text-lg text-signal">{situation?.eta_minutes.toFixed(1) ?? "—"} min</div></div>
           <div><div className="hud-label">BASELINE</div><div className="mt-1 num text-lg text-slate-300">{situation?.eta_baseline_minutes.toFixed(1) ?? "—"} min</div></div>
         </div>
         {situation?.eta_reasons.length ? <div className="mt-3 text-[11px] text-warn">ETA drivers: {situation.eta_reasons.join(" · ")}</div> : <div className="mt-3 text-[11px] text-slate-500">ETA is adapting to telemetry, environment, and machine condition.</div>}

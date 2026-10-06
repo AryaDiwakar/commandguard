@@ -147,7 +147,7 @@ export function ScenarioLab({
   ) : (
     <div className="grid gap-2 sm:grid-cols-2">
       {scenarios.map((scenario) => (
-        <button key={scenario.type} onClick={() => setSelected(scenario.type)} className={"rounded border px-3 py-3 text-left transition " + (selected === scenario.type ? "border-cat/70 bg-cat/10" : "border-carbon-700/70 bg-carbon-950/30 hover:border-carbon-500")}>
+        <button key={scenario.type} onClick={() => setSelected(scenario.type)} className={"rounded border px-3 py-3 text-left transition " + (selected === scenario.type ? "border-signal/70 bg-signal/10" : "border-carbon-700/70 bg-carbon-950/30 hover:border-carbon-500")}>
           <div className="num text-xs text-slate-100">{scenario.label}</div>
           <div className="mt-1 text-[10px] text-slate-500">Onset {String(scenario.default_plan.onset_offset_s)}s · severity {DEFAULT_SEVERITY} · ramp 8s</div>
         </button>
@@ -161,7 +161,7 @@ export function ScenarioLab({
       {selector}
       {error && <div className="rounded border border-danger/50 bg-danger/10 px-3 py-2 text-xs text-danger">{error}</div>}
       {launched && <div className="grid grid-cols-2 gap-2 rounded border border-carbon-700/70 bg-carbon-950/40 px-3 py-3 sm:grid-cols-4">
-        <div><div className="hud-label">FUEL LEVEL</div><div className="mt-1 num text-lg text-cat">{frame ? `${frame.fuel_level_pct.toFixed(2)}%` : "—"}</div></div>
+        <div><div className="hud-label">FUEL LEVEL</div><div className="mt-1 num text-lg text-signal">{frame ? `${frame.fuel_level_pct.toFixed(2)}%` : "—"}</div></div>
         <div><div className="hud-label">FUEL DELTA</div><div className={"mt-1 num text-lg " + (frame && fuelStart !== null && frame.fuel_level_pct < fuelStart ? "text-danger" : "text-slate-200")}>{frame && fuelStart !== null ? `${(frame.fuel_level_pct - fuelStart).toFixed(2)}%` : "—"}</div></div>
         <div className="col-span-2 text-xs text-slate-400">{warning ?? "Waiting for observed degradation telemetry."}</div>
       </div>}
@@ -188,7 +188,7 @@ export function ScenarioLab({
           <div className="text-xs font-semibold text-danger">{incident.incident_type.replace(/_/g, " ")} CONFIRMED</div>
           <div className="text-xs text-slate-300">{incident.recommended_action}</div>
           <div className="flex flex-wrap gap-2">
-            {incident.help_status === "NOT_REQUESTED" && <button onClick={() => requestHelp(machineId, incident.incident_id).then((result) => { setIncident(result.relay); setGlobalIncident(result.relay); }).catch((reason) => setError(reason instanceof Error ? reason.message : "Help request failed."))} className="rounded border border-cat/60 bg-cat/10 px-3 py-2 num text-[10px] tracking-widest text-cat">REQUEST LIVE ASSISTANCE</button>}
+            {incident.help_status === "NOT_REQUESTED" && <button onClick={() => requestHelp(machineId, incident.incident_id).then((result) => { setIncident(result.relay); setGlobalIncident(result.relay); }).catch((reason) => setError(reason instanceof Error ? reason.message : "Help request failed."))} className="rounded border border-signal/60 bg-signal/10 px-3 py-2 num text-[10px] tracking-widest text-signal">REQUEST LIVE ASSISTANCE</button>}
             {incident.status !== "RESOLVED" && <button onClick={() => sendOperatorAction(machineId, "STOP_MACHINE", incident.incident_id).then((result) => { setIncident(result.incident); setGlobalIncident(result.incident); }).catch(() => undefined)} className="rounded border border-danger/60 bg-danger/10 px-3 py-2 num text-[10px] tracking-widest text-danger">STOP MACHINE SAFELY</button>}
           </div>
         </div>}

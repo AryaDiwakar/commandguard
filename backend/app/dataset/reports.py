@@ -223,8 +223,8 @@ def data_dictionary(df: pd.DataFrame, task_df: pd.DataFrame) -> list[dict[str, A
 
 def write_dictionary(out: Path, dictionary: list[dict[str, Any]]) -> None:
     (out / "data_dictionary.json").write_text(json.dumps(dictionary, indent=2, default=str))
-    lines = ["# CAT Smart Operator Assistant — Data Dictionary\n", "",
-             "> This is a SYNTHETIC dataset. Nothing in it is real Caterpillar hardware data.\n", ""]
+    lines = ["# CommandGuard — Smart Operator Assistant — Data Dictionary\n", "",
+             "> This is a SYNTHETIC dataset. Nothing in it is real machine or manufacturer data.\n", ""]
     lines.append("| column | challenge-required | dtype | source | unit | values | description |")
     lines.append("|---|---|---|---|---|---|---|")
     for d in dictionary:

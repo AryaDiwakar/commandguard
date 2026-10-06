@@ -41,13 +41,13 @@ export function IncidentArtifacts({
         <Panel title="INCIDENT REPLAY" right={<span className="num text-[10px] text-holo">{replayFrames.length} FRAMES</span>}>
           <div className="grid grid-cols-3 gap-3">
             <div><div className="hud-label">START FUEL</div><div className="mt-1 num text-lg text-slate-100">{first?.fuel_level_pct.toFixed(1) ?? "—"}%</div></div>
-            <div><div className="hud-label">END FUEL</div><div className="mt-1 num text-lg text-cat">{last?.fuel_level_pct.toFixed(1) ?? "—"}%</div></div>
+            <div><div className="hud-label">END FUEL</div><div className="mt-1 num text-lg text-signal">{last?.fuel_level_pct.toFixed(1) ?? "—"}%</div></div>
             <div><div className="hud-label">END RPM</div><div className="mt-1 num text-lg text-good">{last?.engine_rpm.toFixed(0) ?? "—"}</div></div>
           </div>
           <div className="mt-4 flex h-12 items-end gap-px overflow-hidden rounded border border-carbon-700/60 bg-carbon-950/50 px-2 py-1">
             {replayFrames.map((frame, index) => {
               const height = Math.max(8, Math.min(100, frame.engine_temperature_c));
-              return <span key={`${frame.timestamp_ms}-${index}`} className="flex-1 rounded-t bg-gradient-to-t from-cat/30 to-danger/80" style={{ height: `${height}%` }} />;
+              return <span key={`${frame.timestamp_ms}-${index}`} className="flex-1 rounded-t bg-gradient-to-t from-signal/30 to-danger/80" style={{ height: `${height}%` }} />;
             })}
           </div>
           <div className="mt-2 flex justify-between hud-label"><span>TELEMETRY REPLAY</span><span>EVENT TRACE</span></div>

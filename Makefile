@@ -1,7 +1,7 @@
 .PHONY: help install test test-phase1 run-backend run-web smoke clean
 
 help:
-	@echo "cat-smart-operator-assistant targets:"
+	@echo "commandguard targets:"
 	@echo "  make install     create venv + install backend deps + npm install"
 	@echo "  make test        run full backend test gate (pytest)"
 	@echo "  make test-phase1 phase 1 gate (same as test today)"

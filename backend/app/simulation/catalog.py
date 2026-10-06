@@ -1,8 +1,8 @@
 """Demo catalog: machines, operators, work sites, task templates.
 
 All numeric values are DEMO / SYNTHETIC parameters used only to drive a
-software simulation of a generic heavy machine. They are not Caterpillar
-specifications nor proprietary company data.
+software simulation of a generic heavy machine. They are not real-world
+manufacturer specifications nor proprietary company data.
 """
 from __future__ import annotations
 

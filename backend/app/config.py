@@ -1,7 +1,7 @@
 """Application-level configuration for the Smart Operator Assistant backend.
 
-All tuning values below are DEMO / SYNTHETIC thresholds, not real Caterpillar
-specifications. They are used only to drive a software simulation.
+All tuning values below are DEMO / SYNTHETIC thresholds, not real-world
+machine specifications. They are used only to drive a software simulation.
 """
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 
 
 def _origins() -> tuple[str, ...]:
-    raw = os.environ.get("CAT_CORS_ORIGINS", "")
+    raw = os.environ.get("COMMANDGUARD_CORS_ORIGINS", "")
     if raw.strip():
         return tuple(o.strip() for o in raw.split(",") if o.strip())
     return ("http://localhost:5173", "http://127.0.0.1:5173")
@@ -32,7 +32,7 @@ class Settings:
 
     db_url: str = field(
         default_factory=lambda: os.environ.get(
-            "CAT_DB_URL", "sqlite:///./data/caterpillar.db"
+            "COMMANDGUARD_DB_URL", "sqlite:///./data/commandguard.db"
         )
     )
 

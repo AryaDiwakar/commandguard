@@ -13,7 +13,7 @@ from app.knowledge.llm import generate as llm_generate
 router = APIRouter(prefix="/api/assistant", tags=["assistant"])
 
 LLM_SYSTEM = (
-    "You are CAT CommandGuard, a machine operator co-pilot. "
+    "You are CommandGuard, a machine operator co-pilot. "
     "Answer ONLY from the Retrieve context and Live truth provided. "
     "Never invent sensor values, maintenance claims, or numbers. "
     "Be concise (3-5 sentences), plain language, first person for the operator ('you'). "

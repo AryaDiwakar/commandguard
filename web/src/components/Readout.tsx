@@ -9,14 +9,14 @@ export function Readout({
   label: string;
   value: ReactNode;
   unit?: string;
-  tone?: "good" | "warn" | "danger" | "holo" | "cat";
+  tone?: "good" | "warn" | "danger" | "holo" | "signal";
 }) {
   const toneText: Record<string, string> = {
     good: "text-good",
     warn: "text-warn",
     danger: "text-danger",
     holo: "text-holo",
-    cat: "text-cat",
+    signal: "text-signal",
   };
   return (
     <div className="flex flex-col gap-0.5">

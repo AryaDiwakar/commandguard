@@ -52,7 +52,7 @@ export default function App() {
   useEffect(() => {
     // Clear any previous persistent storage so refreshing always brings up the safety precaution
     try {
-      window.localStorage.removeItem("cat-commandguard-preflight-v1");
+      window.localStorage.removeItem("commandguard-preflight-v1");
     } catch {
       // Ignore if localStorage unavailable
     }
@@ -65,7 +65,7 @@ export default function App() {
       event.preventDefault();
       const current = useTelemetry.getState().seatbeltStatus;
       useTelemetry.getState().setSeatbeltStatus(current === "Fastened" ? "Unfastened" : "Fastened");
-      window.dispatchEvent(new CustomEvent("cat-commandguard-seatbelt-toggle"));
+      window.dispatchEvent(new CustomEvent("commandguard-seatbelt-toggle"));
       operatorInput(useTelemetry.getState().machineId, "TOGGLE_SEATBELT").catch(() => undefined);
     };
     window.addEventListener("keydown", onGlobalSeatbelt);

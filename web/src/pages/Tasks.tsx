@@ -77,7 +77,7 @@ export function TasksPage() {
         </Panel>
         <Panel>
           <div className="hud-label">ACTIVE TASK ETA</div>
-          <div className="mt-2 num text-3xl text-cat">
+          <div className="mt-2 num text-3xl text-signal">
             {situation ? `${situation.eta_minutes.toFixed(1)}m` : activeTask?.model_predicted_min != null ? `${activeTask.model_predicted_min.toFixed(1)}m` : "—"}
           </div>
           <div className="mt-1 text-xs text-slate-500">
@@ -123,7 +123,7 @@ export function TasksPage() {
               </div>
               <div className="rounded border border-carbon-700/70 bg-carbon-950/40 p-2.5">
                 <div className="hud-label">TERRAIN FACTOR</div>
-                <div className="mt-1 num text-base text-cat">
+                <div className="mt-1 num text-base text-signal">
                   {latest ? latest.terrain_condition === "MUDDY" ? "+18%" : latest.terrain_condition === "WET" ? "+8%" : "0%" : "—"}
                 </div>
                 <div className="text-[10px] text-slate-500">{latest?.terrain_condition ?? "—"}</div>
@@ -217,7 +217,7 @@ export function TasksPage() {
                     <td>{task.Weather}</td>
                     <td>{task.Terrain_Condition}</td>
                     <td className="num text-slate-300">{task.Estimated_Time_min.toFixed(1)} min</td>
-                    <td className="num text-cat font-medium">
+                    <td className="num text-signal font-medium">
                       {task.model_predicted_min != null ? `${task.model_predicted_min.toFixed(1)} min` : "—"}
                     </td>
                     <td>

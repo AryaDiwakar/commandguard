@@ -28,7 +28,7 @@ async def lifespan(app: FastAPI):
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="CAT Smart Operator Assistant API", lifespan=lifespan)
+    app = FastAPI(title="CommandGuard — Smart Operator Assistant API", lifespan=lifespan)
 
     app.add_middleware(
         CORSMiddleware,

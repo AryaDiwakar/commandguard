@@ -1,7 +1,7 @@
 """DEMO threshold bands shared by the simulator, detectors, and evaluations.
 
 All values are synthetic tuning parameters for a software simulation of a
-generic heavy machine - NOT Caterpillar specifications.
+generic heavy machine - NOT real-world manufacturer specifications.
 """
 from __future__ import annotations
 

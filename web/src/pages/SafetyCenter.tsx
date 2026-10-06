@@ -157,7 +157,7 @@ export function SafetyCenterPage() {
             </div>
             <div className="text-right text-xs text-slate-500">
               <div>Limit: 4.0 min</div>
-              <div className="num text-cat mt-0.5">{noSignal ? "—" : `~${((idlingMin ?? 0) * 0.05).toFixed(2)} L wasted`}</div>
+              <div className="num text-signal mt-0.5">{noSignal ? "—" : `~${((idlingMin ?? 0) * 0.05).toFixed(2)} L wasted`}</div>
             </div>
           </div>
           <div className="mt-3 h-2 overflow-hidden rounded-full bg-carbon-800">

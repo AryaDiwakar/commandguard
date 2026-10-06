@@ -284,7 +284,7 @@ class SimService:
     def status(self) -> dict[str, Any]:
         return {
             "data_mode": "SIMULATION",
-            "disclaimer": "Simulated telemetry only. Not connected to real Caterpillar hardware or proprietary data.",
+            "disclaimer": "Simulated telemetry only. This application runs entirely on synthetic data; it is not connected to real machines or proprietary data.",
             "sessions": {mid: s.info() for mid, s in self.sessions.items()},
         }
 

@@ -1,7 +1,7 @@
 # Implementation Roadmap
 
 The application is a standalone synthetic machine-operations platform. It does
-not connect to physical Caterpillar hardware or claim access to proprietary CAT
+not connect to physical machines or claim access to proprietary manufacturer
 data.
 
 ## Implemented First Slice

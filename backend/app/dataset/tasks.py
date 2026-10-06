@@ -17,7 +17,7 @@ so `Actual_Time_min` is explainable and regression models can recover the truth.
 The planning estimate is drawn independently of the realized noise (it is set
 before the job runs), mirroring real planning.
 
-All values are DEMO / SYNTHETIC — not real Caterpillar production data.
+All values are DEMO / SYNTHETIC — not real production data.
 """
 from __future__ import annotations
 

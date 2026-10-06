@@ -1,8 +1,8 @@
 import os
 import tempfile
 
-_tmpdir = tempfile.mkdtemp(prefix="cat_p1_")
-os.environ["CAT_DB_URL"] = f"sqlite:///{_tmpdir}/test.db"
+_tmpdir = tempfile.mkdtemp(prefix="cg_p1_")
+os.environ["COMMANDGUARD_DB_URL"] = f"sqlite:///{_tmpdir}/test.db"
 
 import pytest  # noqa: E402
 
